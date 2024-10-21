@@ -115,7 +115,7 @@ function Templates() {
             <Th>Nome</Th>
             <Th>Código</Th>
             <Th>Descrição</Th>
-            <Th>Template EJS</Th>
+         
             <Th>Status</Th>
             <Th>Ações</Th>
           </Tr>
@@ -126,11 +126,7 @@ function Templates() {
               <Td>{template.nome}</Td>
               <Td>{template.codigo}</Td>
               <Td>{template.descricao}</Td>
-              <Td>
-                <Box as="pre" whiteSpace="pre-wrap" wordBreak="break-all">
-                  {template.templateEjs}
-                </Box>
-              </Td>
+      
               <Td>{template.status}</Td>
               <Td>
                 <IconButton

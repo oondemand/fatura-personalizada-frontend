@@ -27,7 +27,7 @@ function IncludeForm() {
   const [initialValues, setInitialValues] = useState({
     nome: '',
     codigo: '',
-    templateId: '',
+    descricao: '',
     conteudo: '',
     contenType: '',
     status: 'ativo',
@@ -64,7 +64,7 @@ function IncludeForm() {
       setInitialValues({
         nome: data.nome,
         codigo: data.codigo,
-        templateId: data.templateId,
+        descricao: data.descricao,
         conteudo: data.conteudo,
         contenType: data.contenType,
         status: data.status,
@@ -94,7 +94,6 @@ function IncludeForm() {
   const validationSchema = Yup.object({
     nome: Yup.string().required('Nome é obrigatório'),
     codigo: Yup.string().required('Código é obrigatório'),
-    templateId: Yup.string().required('Template é obrigatório'),
     conteudo: Yup.string().required('Conteúdo é obrigatório'),
     contenType: Yup.string().required('Content Type é obrigatório'),
     status: Yup.string()
@@ -107,7 +106,7 @@ function IncludeForm() {
       const dados = {
         nome: values.nome,
         codigo: values.codigo,
-        templateId: values.templateId,
+        descricao: values.descricao,
         conteudo: values.conteudo,
         contenType: values.contenType,
         status: values.status,
@@ -181,21 +180,15 @@ function IncludeForm() {
                   </FormControl>
                 )}
               </Field>
-              <Field name="templateId">
+              <Field name="descricao">
                 {({ field, form }) => (
                   <FormControl
-                    isInvalid={form.errors.templateId && form.touched.templateId}
-                    isRequired
+                    isInvalid={form.errors.descricao && form.touched.descricao}
+                    
                   >
-                    <FormLabel>Template</FormLabel>
-                    <Select {...field} placeholder="Selecione um Template">
-                      {templates.map((template) => (
-                        <option key={template._id} value={template._id}>
-                          {template.nome}
-                        </option>
-                      ))}
-                    </Select>
-                    <FormErrorMessage>{form.errors.templateId}</FormErrorMessage>
+                    <FormLabel>descricao</FormLabel>
+                    <Textarea {...field} placeholder="descricao do Include" />
+                    <FormErrorMessage>{form.errors.descricao}</FormErrorMessage>
                   </FormControl>
                 )}
               </Field>

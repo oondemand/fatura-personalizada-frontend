@@ -114,8 +114,7 @@ function Includes() {
           <Tr>
             <Th>Nome</Th>
             <Th>Código</Th>
-            <Th>Template</Th>
-            <Th>Conteúdo</Th>
+
             <Th>Content Type</Th>
             <Th>Status</Th>
             <Th>Ações</Th>
@@ -126,12 +125,7 @@ function Includes() {
             <Tr key={include._id}>
               <Td>{include.nome}</Td>
               <Td>{include.codigo}</Td>
-              <Td>{include.templateId}</Td>
-              <Td>
-                <Box as="pre" whiteSpace="pre-wrap" wordBreak="break-all">
-                  {include.conteudo}
-                </Box>
-              </Td>
+       
               <Td>{include.contenType}</Td>
               <Td>{include.status}</Td>
               <Td>
