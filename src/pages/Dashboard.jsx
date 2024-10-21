@@ -1,5 +1,4 @@
 // src/pages/Dashboard.jsx
-import React from 'react';
 import { Box, Heading, VStack, Button, Flex, Spacer } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 

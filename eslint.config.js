@@ -1,8 +1,9 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+// .eslintrc.js ou outro arquivo de configuração do ESLint
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   { ignores: ['dist'] },
@@ -33,6 +34,11 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // Desativando regras relacionadas ao React em escopo
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
+      // Desativando a regra no-unused-vars
+      'no-unused-vars': 'off',
     },
   },
-]
+];

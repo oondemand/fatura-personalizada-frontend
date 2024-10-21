@@ -1,5 +1,4 @@
 // src/App.jsx
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -16,7 +15,6 @@ import TemplateForm from './pages/TemplateForm';
 import Includes from './pages/Includes';
 import IncludeForm from './pages/IncludeForm';
 import ProtectedRoute from './components/ProtectedRoute';
-// Importe outras páginas conforme necessário
 
 function App() {
   return (
@@ -96,7 +94,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* Rotas para Moeda */}
         <Route
           path="/moedas"
           element={
@@ -121,7 +118,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* Rotas para Templates */}
         <Route
           path="/templates"
           element={
@@ -146,7 +142,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* Rotas para Includes */}
         <Route
           path="/includes"
           element={
@@ -171,7 +166,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* Adicione rotas para outras models */}
         <Route
           path="/*"
           element={
