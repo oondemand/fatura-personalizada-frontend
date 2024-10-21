@@ -33,7 +33,12 @@ function Dashboard() {
          <Button colorScheme="teal" width="200px" onClick={() => navigate('/baseomie')}>
          base-omies
         </Button>
-        {/* Adicione botões para outras seções */}
+        <Button colorScheme="teal" width="200px" onClick={() => navigate('/includes')}>
+        includes
+        </Button>
+        <Button colorScheme="teal" width="200px" onClick={() => navigate('/templates')}>
+        templates
+        </Button>
       </VStack>
     </Box>
   );

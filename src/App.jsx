@@ -1,5 +1,4 @@
 // src/App.jsx
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
@@ -10,6 +9,12 @@ import Configuracoes from './pages/Configuracoes';
 import ConfiguracaoForm from './pages/ConfiguracaoForm';
 import BaseOmie from './pages/BaseOmie';
 import BaseOmieForm from './pages/BaseOmieForm';
+import Moedas from './pages/Moedas';
+import MoedaForm from './pages/MoedaForm';
+import Templates from './pages/Templates';
+import TemplateForm from './pages/TemplateForm';
+import Includes from './pages/Includes';
+import IncludeForm from './pages/IncludeForm';
 import ProtectedRoute from './components/ProtectedRoute';
 // Importe outras páginas conforme necessário
 
@@ -88,6 +93,81 @@ function App() {
           element={
             <ProtectedRoute>
               <BaseOmieForm />
+            </ProtectedRoute>
+          }
+        />
+        {/* Rotas para Moeda */}
+        <Route
+          path="/moedas"
+          element={
+            <ProtectedRoute>
+              <Moedas />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/moedas/novo"
+          element={
+            <ProtectedRoute>
+              <MoedaForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/moedas/editar/:id"
+          element={
+            <ProtectedRoute>
+              <MoedaForm />
+            </ProtectedRoute>
+          }
+        />
+        {/* Rotas para Templates */}
+        <Route
+          path="/templates"
+          element={
+            <ProtectedRoute>
+              <Templates />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/templates/novo"
+          element={
+            <ProtectedRoute>
+              <TemplateForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/templates/editar/:id"
+          element={
+            <ProtectedRoute>
+              <TemplateForm />
+            </ProtectedRoute>
+          }
+        />
+        {/* Rotas para Includes */}
+        <Route
+          path="/includes"
+          element={
+            <ProtectedRoute>
+              <Includes />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/includes/novo"
+          element={
+            <ProtectedRoute>
+              <IncludeForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/includes/editar/:id"
+          element={
+            <ProtectedRoute>
+              <IncludeForm />
             </ProtectedRoute>
           }
         />
