@@ -11,7 +11,7 @@ const obterInclude = (id) => api.get(`/includes/${id}`);
 const criarInclude = (dados) => api.post('/includes', dados);
 
 // Atualizar um Include existente
-const atualizarInclude = (id, dados) => api.put(`/includes/${id}`, dados);
+const atualizarInclude = (id, dados) => api.patch(`/includes/${id}`, dados);
 
 // Deletar um Include
 const deletarInclude = (id) => api.delete(`/includes/${id}`);

@@ -11,7 +11,7 @@ const obterConfiguracao = (id) => api.get(`/configuracoes/${id}`);
 const criarConfiguracao = (dados) => api.post('/configuracoes', dados);
 
 // Atualizar uma configuração existente
-const atualizarConfiguracao = (id, dados) => api.put(`/configuracoes/${id}`, dados);
+const atualizarConfiguracao = (id, dados) => api.patch(`/configuracoes/${id}`, dados);
 
 // Deletar uma configuração
 const deletarConfiguracao = (id) => api.delete(`/configuracoes/${id}`);

@@ -11,7 +11,7 @@ const obterMoeda = (id) => api.get(`/moedas/${id}`);
 const criarMoeda = (dados) => api.post('/moedas', dados);
 
 // Atualizar uma Moeda existente
-const atualizarMoeda = (id, dados) => api.put(`/moedas/${id}`, dados);
+const atualizarMoeda = (id, dados) => api.patch(`/moedas/${id}`, dados);
 
 // Deletar uma Moeda
 const deletarMoeda = (id) => api.delete(`/moedas/${id}`);

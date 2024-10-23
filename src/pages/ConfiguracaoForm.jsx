@@ -148,7 +148,7 @@ function ConfiguracaoForm() {
             placeholder="Valor da configuração"
           />
         </FormControl>
-        <FormControl id="baseOmie" isRequired>
+        <FormControl id="baseOmie">
           <FormLabel>Base Omie</FormLabel>
           <Select
             placeholder="Selecione uma Base Omie"

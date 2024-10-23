@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // src/pages/Login.jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -11,26 +11,27 @@ import {
   VStack,
   Alert,
   AlertIcon,
-} from '@chakra-ui/react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+} from "@chakra-ui/react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/auth/login', {
+      const url = import.meta.env.VITE_API_URL;
+      const response = await axios.post(`${url}/auth/login`, {
         email,
         senha,
       });
-      localStorage.setItem('token', response.data.token);
-      navigate('/usuarios'); // Redirecionar após login bem-sucedido
+      localStorage.setItem("token", response.data.token);
+      navigate("/");
     } catch (err) {
-      setError('Credenciais inválidas');
+      setError("Credenciais inválidas");
     }
   };
 
@@ -66,6 +67,7 @@ function Login() {
           Entrar
         </Button>
       </VStack>
+      <Box>vs 0.0.2</Box>
     </Box>
   );
 }

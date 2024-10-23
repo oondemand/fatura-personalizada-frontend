@@ -11,7 +11,7 @@ const obterBaseOmie = (id) => api.get(`/base-omies/${id}`);
 const criarBaseOmie = (dados) => api.post('/base-omies', dados);
 
 // Atualizar uma BaseOmie existente
-const atualizarBaseOmie = (id, dados) => api.put(`/base-omies/${id}`, dados);
+const atualizarBaseOmie = (id, dados) => api.patch(`/base-omies/${id}`, dados);
 
 // Deletar uma BaseOmie
 const deletarBaseOmie = (id) => api.delete(`/base-omies/${id}`);

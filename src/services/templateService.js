@@ -11,7 +11,7 @@ const obterTemplate = (id) => api.get(`/templates/${id}`);
 const criarTemplate = (dados) => api.post('/templates', dados);
 
 // Atualizar um Template existente
-const atualizarTemplate = (id, dados) => api.put(`/templates/${id}`, dados);
+const atualizarTemplate = (id, dados) => api.patch(`/templates/${id}`, dados);
 
 // Deletar um Template
 const deletarTemplate = (id) => api.delete(`/templates/${id}`);
